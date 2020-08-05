@@ -1,0 +1,73 @@
+.jumbotron {
+  background-color: white;
+  padding-bottom: 0px;
+}
+
+table.form {
+  margin-bottom: 15px;
+}
+
+.split {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+}
+
+.side {
+  border: solid grey 1px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 325px;
+  margin: auto;
+  margin-top: 200px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 25%;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  width: 75%;
+  margin-top: 190px;
+}
+
+#info {
+  font-size: 16pt;
+}
+
+body {
+  font-size: 12pt;
+}
+
+hr {
+  margin-right: 0px;
+}
+
+#placeholder {
+  margin:10px;
+  font-size:1.25em;
+}
+
+table {
+  border-collapse:collapse;
+  border:1px solid black;
+}
+
+#placeholder td {
+  border:1px solid black;
+  width:50px;
+  height:50px;
+  text-align:center;
+}
+
+#placeholder tr:nth-child(1), #placeholder td:nth-child(1) {
+  background-color: lightgrey;
+}
