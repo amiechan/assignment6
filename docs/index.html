@@ -1,8 +1,7 @@
 <!--
- File: /~amchan/public_html/index.html
  Amy Chan, Amy_Chan@student.uml.edu, amchan@cs.uml.edu
  UMass Lowell Computer Science Student - 91.61 GUI Programming I
- updated on August 5, 2020 at 10:27PM
+ updated on August 5, 2020 at 4:55PM
  Description: Interactive Dynamic Table HW 6
 -->
 <!DOCTYPE html>
@@ -31,35 +30,32 @@
             </div>
         </div>
 
-        <div>
-            <div class="form">
-                <form id="tableForm">
-                    <div class="form-group">
-                        <label>Enter minimum horizontal axis value</label>
-                        <input class="form-control form-control-lg" name="hMin" id="hMin" placeholder="Horizontal Bound">
-                    </div>
-                    <div class="form-group">
-                        <label>Enter maximum horizontal axis value</label>
-                        <input class="form-control form-control-lg" name="hMax" id="hMax" placeholder="Horizontal Bound">
-                    </div>      
-                    <div class="form-group">
-                        <label>Enter minimum vertical axis value</label>
-                        <input class="form-control form-control-lg" name="vMin" id="vMin" placeholder="Vertical Bound">
-                    </div>        
-                    <div class="form-group">
-                        <label>Enter maximum vertical axis value</label>
-                        <input class="form-control form-control-lg" name="vMax" id="vMax" placeholder="Vertical Bound">
-                    </div>
-                    <div class="form-button">
-                        <button onclick="generateTable()" type="button" class="btn btn-primary btn-lg">Generate Table</button>
-                    </div>
-                </form>
-            </div>    
-        </div>
+        <div class="form">
+            <form id="tableForm">
+                <div class="form-group">
+                    <label>Enter minimum horizontal axis value</label>
+                    <input class="form-control form-control-lg" name="hMin" id="hMin" placeholder="Horizontal Bound">
+                </div>
+                <div class="form-group">
+                    <label>Enter maximum horizontal axis value</label>
+                    <input class="form-control form-control-lg" name="hMax" id="hMax" placeholder="Horizontal Bound">
+                </div>      
+                <div class="form-group">
+                    <label>Enter minimum vertical axis value</label>
+                    <input class="form-control form-control-lg" name="vMin" id="vMin" placeholder="Vertical Bound">
+                 </div>        
+                <div class="form-group">
+                    <label>Enter maximum vertical axis value</label>
+                    <input class="form-control form-control-lg" name="vMax" id="vMax" placeholder="Vertical Bound">
+                </div>
+                <div class="form-button">
+                    <button onclick="generateTable()" type="button" class="btn btn-primary btn-lg">Generate Table</button>
+                </div>
+            </form>
+        </div>   
 
         <div>
             <div id="placeholder"></div>
         </div>
-
     </body>
 </html>
