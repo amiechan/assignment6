@@ -1,11 +1,23 @@
+function initializeTable() {
+    $("#hMin").val('1');
+    $("#hMax").val('10');
+    $("#vMin").val('1');
+    $("#vMax").val('10');
+    document.getElementById("formButton").click();
+}
+
+function errorHighlight(inputField)  {
+    $("#" + inputField).focus();
+}
+
 $(document).ready( function() {
+    initializeTable();
     $.validator.setDefaults({
         errorClass: "help-block",
         highlight: function(element) {
             $(element)
                 .closest(".form-group")
                 .addClass("has-error")
-                .focus("input")
         },
         unhighlight: function(element) {
             $(element)
@@ -35,27 +47,51 @@ $(document).ready( function() {
         },
         messages : {
             hMin : {
-                required: "The horizontal bound value is required.",
-                number: "Please enter a valid number."
+                required: function () {
+                    errorHighlight("hMin");
+                    return "The horizontal bound value is required.";
+                },
+                number: function() {
+                    errorHighlight("hMin");
+                    return "Please enter a valid number."
+                }
             },
             hMax : {
-                required: "The horizontal bound value is required.",
-                number: "Please enter a valid number."
+                required: function () {
+                    errorHighlight("hMax");
+                    return "The horizontal bound value is required.";
+                },
+                number: function() {
+                    errorHighlight("hMax");
+                    return "Please enter a valid number."
+                }
             },
             vMin : {
-                required: "The vertical bound value is required.",
-                number: "Please enter a valid number."
+                required: function () {
+                    errorHighlight("vMin");
+                    return "The vertical bound value is required.";
+                },
+                number: function() {
+                    errorHighlight("vMin");
+                    return "Please enter a valid number."
+                }
             },
             vMax : {
-                required: "The vertical bound value is required.",
-                number: "Please enter a valid number."
+                required: function () {
+                    errorHighlight("vMax");
+                    return "The vertical bound value is required.";
+                },
+                number: function() {
+                    errorHighlight("vMax");
+                    return "Please enter a valid number."
+                }
             }
         },
         errorPlacement : function(error, element){
             $(error).appendTo( element.parent("div"));
         }
 
-    })
+    });
 });
 
 function generateTable() {
